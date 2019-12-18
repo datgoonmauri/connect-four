@@ -1,0 +1,132 @@
+html {
+  background-image: linear-gradient( rgb(20, 16, 16), rgb(28, 100, 255));
+}
+
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-image: radial-gradient(rgb(34, 137, 255), rgb(0, 0, 0));
+  text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0, rgba(0, 0, 0, .1) 0 6px 1px, rgba(0, 0, 0, .1) 0 0 5px, rgba(0, 0, 0, .3) 0 1px 3px, rgba(0, 0, 0, .15) 0 3px 5px, rgba(0, 0, 0, .2) 0 5px 10px, rgba(0, 0, 0, .2) 0 10px 10px, rgba(0, 0, 0, .1) 0 20px 20px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.wins {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+  text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0, rgba(0, 0, 0, .1) 0 6px 1px, rgba(0, 0, 0, .1) 0 0 5px, rgba(0, 0, 0, .3) 0 1px 3px, rgba(0, 0, 0, .15) 0 3px 5px, rgba(0, 0, 0, .2) 0 5px 10px, rgba(0, 0, 0, .2) 0 10px 10px, rgba(0, 0, 0, .1) 0 20px 20px;
+  text-align: center;
+  font-size: 45px;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgb(33, 8, 255), 0 0 20px #fff, 0 0 30px #030202, 0 0 40px #000000, 0 0 50px #0300c0, 0 0 60px #000000, 0 0 70px #000000;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #b6b3b3, 0 0 40px #011272, 0 0 50px #b8b5b5, 0 0 60px #002281, 0 0 70px #0873ff, 0 0 80px #05037e;
+  }
+}
+
+#boxGrid {
+  border: 1px solid rgb(253, 255, 252);
+  border-style: double;
+  box-shadow: 2px 4px 10px 4px rgb(1, 255, 242);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  background-color: #011938;
+}
+
+#gameTable {
+  /* border: 1px solid rgb(252, 250, 250); */
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  /* flex-flow: cou wrap; */
+  box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
+  background-image: url("img/kenzie.jpg");
+  background-size: cover;
+  animation: glow 2s ease-in infinite alternate;
+}
+
+.column {
+  border: 1px solid #f0f0f0;
+  margin: 10px;
+  width: 80px;
+  height: 500px;
+  display: flex;
+  flex-direction: column-reverse;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.discBlack, .discRed {
+  border-radius: 50px;
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.discBlack {
+  background-image: url("img/randy.jpg");
+  box-shadow: 5px 4px 10px 4px rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+  border-style: double;
+  animation-name: slideIn;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.discRed {
+  background-image: url("img/chok.jpg");
+  box-shadow: 2px 4px 10px 4px rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+  border-style: double;
+  animation-name: slideIn;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+#pageWrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0);
+    transform: translateY(-300px);
+  }
+  20% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+}
